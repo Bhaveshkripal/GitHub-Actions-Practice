@@ -1,6 +1,7 @@
 name: CICD
 
-on: 
+on: ubuntu-latest
+
   code:
     runs-on: ubuntu-latest
       steps:
@@ -12,6 +13,7 @@ on:
       steps:
         - name: Build useing Dockerr
           run: echo " Building useing Docker"
+        
   tets:
     needs: [build]
     runs-on: ubuntu-latest
