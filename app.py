@@ -2,6 +2,8 @@
 from flask import Flask, render_template
 app = Flask(__name__)
 
+# adding error to check the linter
+if sjds
 
 @app.route('/')
 def hello_world():
