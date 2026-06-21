@@ -1,0 +1,27 @@
+# Goal fo rthis file is to understand and practice lint to check for code error, indentation error, etc.
+
+name: Auto - lint
+
+on:
+# the lint.yml should run when any changes is made in the app.py file ( any .py file).
+  push:
+    paths: '*.py'
+
+jobs:
+  Code-checking:
+    runs-on: ubuntu-latest
+    steps:
+# This step will automaticaly clone the code of the current branch into the runner.
+      - name: Checkout/Clone the Code  
+        uses: actions/checkout@v7
+
+# This step will install the linting toll
+      - name: install linter
+        run: pip install ruff
+
+      - name: Check the file for lint
+        run: ruff check .
+
+        
+
+        
