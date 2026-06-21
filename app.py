@@ -1,3 +1,4 @@
+# This file is added to the linter check 
 from flask import Flask, render_template
 app = Flask(__name__)
 
